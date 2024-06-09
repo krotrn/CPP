@@ -5,7 +5,7 @@ public:
     static int noOfBike;
     int tyresize;
     int enginsize;
-    Bike (int tyresize, int enginsize =200)
+    Bike (int tyresize, int enginsize = 200)
     {
         this->tyresize = tyresize;
         this->enginsize = enginsize;
