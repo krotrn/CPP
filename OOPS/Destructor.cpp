@@ -38,3 +38,14 @@ int main()
     Bike Honda(50,400);
     Bike Sony(100,800);
 }
+
+// Destructor is a special member function of a class that is executed automatically when an object of it goes out of scope or is explicitly destroyed.
+// It is used to release resources allocated by the object during its lifetime.
+
+// In the given code, the destructor is already defined for the class Bike. It is defined using the tilde (~) symbol followed by the class name.
+// The destructor is called automatically when the object of the class goes out of scope or is explicitly destroyed.
+
+// If you want to add some additional code in the destructor, you can do so by modifying the existing destructor definition.
+
+// For example, you can add a print statement to display a message when the destructor is called:
+
