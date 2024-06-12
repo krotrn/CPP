@@ -3,7 +3,6 @@ using namespace std;
 
 // Multilevel Inheritance
 // Multilevel Inheritance is a feature of C++ where a class can inherit from a derived class, making the derived class the base class for another class.
-
 // Eg: Class A is a base class for Class B and Class B is a base class for Class C. So, Class C is a derived class for Class B and Class B is a derived class for Class A.
 
 class A
