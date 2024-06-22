@@ -1,15 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Node{
+class Node
+{
 public:
     int val;
     Node *next;
-    Node(int val) : val(val), next(NULL){}
+    Node(int val) : val(val), next(NULL) {}
 };
 
-void display(Node* head){
+void display(Node *head)    // S.C -> O(n)
+{ 
     Node *temp = head;
-    while(temp!=NULL)
+    while (temp != NULL)
     {
         cout << temp->val << " ";
         temp = temp->next;
@@ -17,15 +19,24 @@ void display(Node* head){
     cout << endl;
 }
 
-int size(Node* head){
+int size(Node *head)
+{
     Node *temp = head;
     int c = 0;
-    while(temp!=NULL)
+    while (temp != NULL)
     {
         c++;
         temp = temp->next;
     }
     return c;
+}
+
+void displayRec(Node *head)     // S.C -> O(n)
+{
+    if (head == NULL)
+        return;
+    cout << head->val << " ";
+    displayRec(head->next);
 }
 
 int main()
@@ -40,6 +51,7 @@ int main()
     c->next = d;
     d->next = e;
 
-    display(a);
-    cout << size(a);
+    // display(a);
+    displayRec(a);
+    // cout << size(a);
 }
