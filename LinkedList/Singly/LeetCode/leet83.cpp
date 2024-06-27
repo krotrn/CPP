@@ -13,23 +13,20 @@ class Solution
 public:
     ListNode *deleteDuplicates(ListNode *head)
     {
-        if (head == nullptr || head->next == nullptr)
+        if(head == nullptr || head->next==nullptr)
             return head;
-        else
-        {
+        else{
             ListNode *slow = head;
             ListNode *fast = head->next;
-            while (fast != nullptr)
-            {
-                while (fast != nullptr && slow->val == fast->val)
-                {
+            while(fast!=nullptr){
+                while(fast != nullptr && slow->val == fast->val){
                     fast = fast->next;
                     slow->next = fast;
                 }
                 slow = fast;
-                if (fast != nullptr)
-                    fast = fast->next;
+                if(fast!=nullptr) fast = fast->next;
             }
         }
+        return head;
     }
 };
