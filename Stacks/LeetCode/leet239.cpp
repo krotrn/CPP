@@ -7,7 +7,7 @@ class Solution
 public:
     vector<int> maxSlidingWindow(vector<int> &nums, int k)
     {
-        int n = nums.size();
+               int n = nums.size();
         if(n==1) return nums;
         vector<int> nxtGrIdx(n);
         stack<int> st;
@@ -29,8 +29,8 @@ public:
             if(j<i)
                 j = i;
             int mx = ans[j];
-            while(j<i+k){  // nextGreaterEle inside the window
-                mx = max(mx, nums[nxtGrIdx[j]]);
+            while(j<i+k){  // nextGreaterEle idside the window
+                mx = nums[j];
                 if(nxtGrIdx[j] >= i+k)
                     break;
                 j = nxtGrIdx[j];
