@@ -58,3 +58,6 @@ public:
         return maxArea;
     }
 };
+int main(){
+    
+}
