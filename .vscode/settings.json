@@ -3,6 +3,9 @@
         "iostream": "cpp",
         "all": "cpp",
         "new": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "queue": "cpp",
+        "array": "cpp",
+        "regex": "cpp"
     }
 }
