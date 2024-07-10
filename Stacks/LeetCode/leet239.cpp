@@ -28,8 +28,8 @@ public:
         for(int i = 0; i < n - k + 1; i++){
             if(j<i)
                 j = i;
-            int mx = ans[j];
-            while(j<i+k){  // nextGreaterEle idside the window
+            int mx = nums[j];
+            while(j<i+k){  // nextGreaterEle inside the window
                 mx = nums[j];
                 if(nxtGrIdx[j] >= i+k)
                     break;
