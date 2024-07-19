@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include<stack>
+#include<algorithm>
 using namespace std;
 
 struct TreeNode
@@ -26,6 +28,29 @@ public:
     vector<int> postorderTraversal(TreeNode* root) {
         vector<int> v;
         postOrder(v, root);
+        return v;
+    }
+};
+
+
+
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> v;
+        stack<TreeNode *> st;
+        if(root != nullptr)st.push(root);
+        while (st.size() > 0)
+        {
+            TreeNode *temp = st.top();
+            st.pop();
+            v.push_back(temp->val);
+            if (temp->left != nullptr)
+                st.push(temp->right);
+            if (temp->right != nullptr)
+                st.push(temp->right);
+            reverse(v.begin(), v.end());
+        }
         return v;
     }
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 
 struct TreeNode
@@ -12,20 +13,45 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-
-class Solution {
+class Solution
+{
 public:
-    void preOrder(vector<int>& v, TreeNode* root) {
-        if (root == NULL) {
+    void preOrder(vector<int> &v, TreeNode *root)
+    {
+        if (root == NULL)
+        {
             return;
         }
         v.push_back(root->val);
         preOrder(v, root->left);
         preOrder(v, root->right);
     }
-    vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> preorderTraversal(TreeNode *root)
+    {
         vector<int> v;
         preOrder(v, root);
+        return v;
+    }
+};
+
+class Solution
+{
+public:
+    vector<int> preorderTraversal(TreeNode *root)
+    {
+        vector<int> v;
+        stack<TreeNode *> st;
+        if(root != nullptr) st.push(root);
+        while (!st.empty())
+        {
+            TreeNode *temp = st.top();
+            st.pop();
+            v.push_back(temp->val);
+            if (temp->right)
+                st.push(temp->right);
+            if (temp->left)
+                st.push(temp->left);
+        }
         return v;
     }
 };
