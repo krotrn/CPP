@@ -30,8 +30,6 @@ public:
 // inorder traversal
 class Solution {
 public:
-    
-
     bool isValidBST(TreeNode* root) {
         vector<int> v;
         stack<TreeNode*> st;
