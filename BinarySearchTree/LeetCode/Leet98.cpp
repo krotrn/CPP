@@ -31,7 +31,7 @@ public:
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        vector<int> v;
+        long long prev = LLONG_MIN;
         stack<TreeNode*> st;
         TreeNode* node = root;
         while(st.size() || node) {
@@ -42,11 +42,20 @@ public:
             else {
                 node = st.top();
                 st.pop();
-                if(v.size() && v.back() >= node->val) return false;
-                v.push_back(node->val);
+                if(prev >= (long long)node->val) return false;
+                prev = (long long)node->val;
                 node = node->right;
             }
         }
         return true;
     }
 };
+
+int main() {
+    TreeNode* root = new TreeNode(2);
+    root->left = new TreeNode(1);
+    root->right = new TreeNode(3);
+    Solution sol;
+    cout << sol.isValidBST(root) << endl;
+    return 0;
+}
