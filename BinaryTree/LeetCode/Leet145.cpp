@@ -46,7 +46,7 @@ public:
             st.pop();
             v.push_back(temp->val);
             if (temp->left != nullptr)
-                st.push(temp->right);
+                st.push(temp->left);
             if (temp->right != nullptr)
                 st.push(temp->right);
             reverse(v.begin(), v.end());

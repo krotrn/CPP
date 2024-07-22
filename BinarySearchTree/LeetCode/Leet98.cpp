@@ -15,17 +15,17 @@ struct TreeNode
 };
 
 
-// class Solution {
-// public:
-//     bool helper(TreeNode* root, long long min, long long max) {
-//         if(root == NULL) return true;
-//         if((long long)root->val <= min || (long long)root->val >= max) return false;
-//         return helper(root->left, min, (long long)root->val) && helper(root->right, (long long)root->val, max);
-//     }
-//     bool isValidBST(TreeNode* root) {
-//         return helper(root, LONG_LONG_MIN, LONG_LONG_MAX);
-//     }
-// };
+class Solution {
+public:
+    bool helper(TreeNode* root, long long min, long long max) {
+        if(root == NULL) return true;
+        if((long long)root->val <= min || (long long)root->val >= max) return false;
+        return helper(root->left, min, (long long)root->val) && helper(root->right, (long long)root->val, max);
+    }
+    bool isValidBST(TreeNode* root) {
+        return helper(root, LONG_LONG_MIN, LONG_LONG_MAX);
+    }
+};
 
 // inorder traversal
 class Solution {

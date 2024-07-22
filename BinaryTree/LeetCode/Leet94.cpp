@@ -24,7 +24,7 @@ public:
         v.push_back(root->val);
         inOrder(v, root->right);
     }
-    vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> inorderTraversal(TreeNode* root) {
         vector<int> v;
         inOrder(v, root);
         return v;
@@ -34,7 +34,7 @@ public:
 
 class Solution {
 public:
-    vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> inorderTraversal(TreeNode* root) {
         vector<int> v;
         stack<TreeNode *> st;
         TreeNode *node = root;
