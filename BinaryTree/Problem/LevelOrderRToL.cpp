@@ -27,7 +27,8 @@ void printNthLevelRev(Node* root, int level){
     printNthLevelRev(root->left, level - 1);
     return;
 }
-void levelOrderRtoL(Node* root, int max ){
+void levelOrderRtoL(Node* root){
+    int max = level(root);
     for (int i = 1; i <= max; i++){
         printNthLevelRev(root, i);
         cout<<endl;
@@ -43,7 +44,6 @@ int main(){
     root->left->right = new Node(5);
     root->right->left = new Node(6);
     root->right->right = new Node(7);
-    int max = level(root);
-    levelOrderRtoL(root, max);
+    levelOrderRtoL(root);
     return 0;
 }
