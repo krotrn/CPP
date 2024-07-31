@@ -51,10 +51,10 @@ public:
         {
             int left = 2 * curr;
             int right = 2 * curr + 1;
-            // if left child is greater than idx, then it means there is no child
+            // if left  is greater than idx, then it means there is no child
             if(left >= idx)
                 break;
-            // if right child is greater than idx, then it means there is only left child
+            // if right  is greater than idx, then it means there is only left child
             if (right >= idx)
             {
                 if (heap[curr] > heap[left])
