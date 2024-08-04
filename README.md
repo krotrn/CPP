@@ -14,7 +14,8 @@ Till now, I have covered a variety of topics in both data structures and algorit
 ### Data Structures
 
 - **Arrays**: Understanding static and dynamic arrays, and their applications.
-- **Linked Lists**: Singly and doubly linked lists, and implementing basic operations such as insertion, deletion, and traversal.
+- **Linked Lists**: Singly and doubly linked lists, and implementing basic operations such as insertion, deletion, and traversal
+- **Stack**
 
 ### Algorithms
 
