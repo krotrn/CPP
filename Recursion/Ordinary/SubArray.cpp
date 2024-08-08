@@ -1,4 +1,5 @@
-#include<all>
+#include <bits/stdc++.h>
+using namespace std;
 //  in unique elements only
 void subarr( vector<int> ans, vector<int> &arr, int idx, vector<vector<int>> &v)
 {

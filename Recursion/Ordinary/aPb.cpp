@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 // int power(int a, int b) // T.C = O(b), S.C = O(b)stack frame
 // {
 //     if (b == 0)

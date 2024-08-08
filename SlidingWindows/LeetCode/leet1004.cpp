@@ -1,5 +1,5 @@
-#include <all>
-
+#include <bits/stdc++.h>
+using namespace std;
 // int longestOnes(vector<int> &nums, int k)
 // {
 //     int maxlen = INT_MIN;

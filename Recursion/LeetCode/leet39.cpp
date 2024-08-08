@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 void com(vector<int> ans, vector<int> &candidates, int target, int idx, vector<vector<int>>& v)
 {
     if (target == 0)

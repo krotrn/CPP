@@ -1,4 +1,5 @@
-#include<all>
+#include <bits/stdc++.h>
+using namespace std;
 void Max(vector<int>& v, int m, int n)
 {
     if (n == v.size())

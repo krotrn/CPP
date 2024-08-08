@@ -1,4 +1,5 @@
-#include<all>
+#include <bits/stdc++.h>
+using namespace std;
 void TOH(int n, char s, char h, char d)
 {
     if (n == 0) return;

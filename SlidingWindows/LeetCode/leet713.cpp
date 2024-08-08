@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 
 int numSubarrayProductLessThanK(vector<int> &nums, int k)
 {

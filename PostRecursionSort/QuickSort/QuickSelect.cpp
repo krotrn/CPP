@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 
 int swapping(vector<int> &v, int s, int e)
 {

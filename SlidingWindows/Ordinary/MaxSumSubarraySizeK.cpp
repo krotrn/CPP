@@ -1,5 +1,5 @@
-#include<all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int Maxsum(vector<int>& v, int k)
 {
     int n = v.size();

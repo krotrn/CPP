@@ -1,5 +1,5 @@
-#include<all>
-
+#include <bits/stdc++.h>
+using namespace std;
 void subset(vector<int> &arr, int idx, vector<int> ans, vector<vector<int>> &v)
 {
     if(idx==-1)

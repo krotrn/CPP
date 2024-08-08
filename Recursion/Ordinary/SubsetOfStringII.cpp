@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 void storesubstr(string ans, string og, vector<string> &v,bool t)
 {
     if (og == "")

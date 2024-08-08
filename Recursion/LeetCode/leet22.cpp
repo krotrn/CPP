@@ -1,5 +1,5 @@
-#include<all>
-
+#include <bits/stdc++.h>
+using namespace std;
 void gen(string ans, vector<string> &v, int o, int c)
 {
     if (ans[0] == ')')

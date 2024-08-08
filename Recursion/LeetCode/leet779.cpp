@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 //  T.C = O(n)
 int kthGrammar(int n, int k)
 {

@@ -1,5 +1,5 @@
-#include <all>
-
+#include <bits/stdc++.h>
+using namespace std;
 vector<int> productExceptSelf(vector<int> &nums)
 {
     int n = nums.size();

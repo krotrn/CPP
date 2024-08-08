@@ -1,5 +1,5 @@
-#include<all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int maze(int x, int y)
 {
     if (x == 1 || y == 1)

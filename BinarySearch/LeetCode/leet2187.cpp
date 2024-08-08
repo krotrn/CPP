@@ -1,4 +1,4 @@
-#include <all>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool check(vector<int> &v, long long m, int t)

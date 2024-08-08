@@ -1,5 +1,5 @@
-#include <all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int bestClosingTime(string customers)
 {
     int n = customers.length();

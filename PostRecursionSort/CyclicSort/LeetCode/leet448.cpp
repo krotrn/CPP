@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 
 vector<int> findDisappearedNumbers(vector<int> &nums)
 {

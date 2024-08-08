@@ -1,5 +1,5 @@
-#include<all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int gcd(int a, int b) //  O(log(a+b))
 {
     if(a==0) return b;

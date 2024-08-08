@@ -1,5 +1,5 @@
-#include <all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int maxSatisfied(vector<int> &customers, vector<int> &grumpy, int minutes)
 {
     int n = customers.size();

@@ -1,4 +1,5 @@
-#include<all>
+#include <bits/stdc++.h>
+using namespace std;
 vector<int> FirstNegative(vector<int> &v, int k)
 {
     int n = v.size();

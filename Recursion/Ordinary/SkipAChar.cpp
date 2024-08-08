@@ -1,4 +1,5 @@
-#include<all>
+#include <bits/stdc++.h>
+using namespace std;
 void skip(string str, string ans, char x, int i)
 {
     if (i == str.size())

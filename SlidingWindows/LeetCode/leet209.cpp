@@ -1,5 +1,5 @@
-#include <all>
-
+#include <bits/stdc++.h>
+using namespace std;
 int minSubArrayLen(int target, vector<int> &nums)
 {
     int i = 0;

@@ -1,4 +1,5 @@
-#include <all>
+#include <bits/stdc++.h>
+using namespace std;
 void Partition(vector<int> &v)
 {
     int n = v.size();
