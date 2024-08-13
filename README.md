@@ -17,6 +17,7 @@ Till now, I have covered a variety of topics in both data structures and algorit
 - **Linked Lists**: Singly and doubly linked lists, and implementing basic operations such as insertion, deletion, and traversal
 - **Stack**
 - **Queue**
+- **HEAPS**
 
 ### Algorithms
 
