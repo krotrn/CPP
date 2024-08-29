@@ -13,7 +13,7 @@ int minProdct(vector<int> &v){
             continue;
         else if (v[i] < 0)
             count++;
-        if (v[i] < 0 && i == n - 1 && count % 2 || v[i] < 0 && v[i + 1] >= 0 && count % 2)
+        if ((v[i] < 0 && i == n - 1 && count % 2) || (v[i] < 0 && v[i + 1] >= 0 && count % 2))
             continue;
         product *= v[i];
     }

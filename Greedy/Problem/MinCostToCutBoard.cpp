@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int minCost(int M, int N, vector<int> &X, vector<int> &Y)
-{
+int minCost(int M, int N, vector<int> &X, vector<int> &Y){
      int hor = 1;
      int ver = 1;
      int cost = 0;
@@ -11,21 +10,20 @@ int minCost(int M, int N, vector<int> &X, vector<int> &Y)
      sort(Y.begin(), Y.end(), [](int p1, int p2)
           { return p1 > p2; });
      int h = 0, v = 0;
-     while(h<Y.size() && v<X.size()){
-          if(X[v]>Y[h]){
+     while (h < Y.size() && v < X.size()){
+          if (X[v] > Y[h]){
                cost += X[v++] * ver;
                hor++;
-          }
-          else{
+          }else {
                cost += Y[h++] * hor;
                ver++;
           }
      }
-     if(h==Y.size()){
-          while(v<X.size())
+     if (h == Y.size()){
+          while (v < X.size())
                cost += X[v++] * ver;
-     }else if(v==X.size()) {
-          while(h<Y.size())
+     }else if (v == X.size()){
+          while (h < Y.size())
                cost += Y[h++] * hor;
      }
      return cost;
