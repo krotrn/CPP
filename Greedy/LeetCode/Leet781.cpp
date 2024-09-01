@@ -1,27 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution
-{
-public:
-    int numRabbits(vector<int> &answers)
-    {
-        unordered_map<int, int> mp;
-        for (auto ele : answers)
-            mp[ele]++;
-        int count = 0;
-        for (auto ele : mp)
-        {
-            if ((ele.first + 1 == ele.second) || (ele.first > ele.second))
-                count += ele.first + 1;
-            else{
-                count += ele.first + 1;
-                count += (ele.second - ele.first - 1) * (ele.first + 1);
-            }
-        }
-        return count;
-    }
-};
+
+/**
+ * wrong for [0,0,0,1,0]
+ */
+// class Solution
+// {
+// public:
+//     int numRabbits(vector<int> &answers)
+//     {
+//         unordered_map<int, int> mp;
+//         for (auto ele : answers)
+//             mp[ele]++;
+//         int count = 0;
+//         for (auto ele : mp)
+//         {
+//             if ((ele.first + 1 == ele.second) || (ele.first > ele.second))
+//                 count += ele.first + 1;
+//             else{
+//                 count += ele.first + 1;
+//                 count += (ele.second - ele.first - 1) * (ele.first + 1);
+//             }
+//         }
+//         return count;
+//     }
+// };
 class Solution
 {
 public:

@@ -19,7 +19,7 @@ int main(){
     pair<string,int> p;
     p.first = "a";
     p.second = 1;
-    m.insert(p);
+    m.insert(p); // O(1)
     p = make_pair("b",2);
     m.insert(p);
     p = make_pair("c",3);
@@ -32,13 +32,13 @@ int main(){
     m.insert(p);
     m.erase("a");
 
-    cout<<m.size()<<endl;
+    cout<<m.size()<<endl; // O(1)
 
-    for(auto i : m){
+    for(auto i : m){ // O(n)
         cout<<i.first<<" "<<i.second<<endl;
     }
 
-    if(m.find("a") == m.end()){
+    if(m.find("a") == m.end()){ // O(1)
         cout<<"Not found"<<endl;
     }
     else{
