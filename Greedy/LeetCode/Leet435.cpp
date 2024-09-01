@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * check out min stack
+ */
+
 class Solution
 {
 public:
