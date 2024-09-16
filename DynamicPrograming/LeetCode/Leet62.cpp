@@ -41,7 +41,7 @@ using namespace std;
 // /**
 //  * Approach 1: Recursion
 //  */
-// class Solution {
+// class Solution { // Accepted
 // public:
 //     int helper(int m,int n,int str,int stc, vector<vector<int>> &dp){
 //         if(str == m && stc == n)
@@ -64,7 +64,7 @@ using namespace std;
  * Approach 2: Tabulation
  */
 
-class Solution {
+class Solution { // Accepted
 public:
     int uniquePaths(int m, int n){
         vector<vector<int>> dp(m, vector<int> (n,-1));

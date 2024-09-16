@@ -4,6 +4,8 @@ using namespace std;
 
 // stateof DP = a set of all parameter using which we can identify a sub-problem uniquely.
 
+
+// Approach 1: Recurrsion
 // class Solution {
 //     /**
 //      * Timelimit Exceeded
@@ -41,7 +43,7 @@ using namespace std;
 //     }
 // };
 
-class Solution {
+class Solution { // Accepted
 public:
     int helper(vector<int>& nums, int start, vector<int>& dp){
         if(dp[start] != -1)
@@ -55,6 +57,27 @@ public:
     int rob(vector<int>& nums) {
         vector<int> dp(nums.size(),-1);
         return helper(nums, 0,dp);
+    }
+};
+
+
+
+// Approach 2: Tabulation
+class Solution{
+public:
+    int rob(vector<int>& nums){
+        int n = nums.size();
+        if(n == 1)
+            return nums[0];
+        if(n == 2)
+            return max(nums[0], nums[1]);
+        vector<int> dp(n);
+        dp[n - 1] = nums[n - 1];
+        dp[n - 2] = max(nums[n - 2],dp[n-1]);
+        for (int i = n - 3; i >= 0; i--){
+            dp[i] = max(dp[i + 1], nums[i] + dp[i + 2]);
+        }
+        return max(dp[0], dp[1]);
     }
 };
 
