@@ -26,11 +26,14 @@ This journey is ongoing, and I plan to delve deeper into each of these topics, e
 
 ## Resources
 
+## My LeetCode Account
+- ([LeetCode](https://leetcode.com/u/Krotrn/))
+
 I've been utilizing a variety of resources for learning, including online courses, textbooks, and coding platforms like LeetCode and HackerRank. Some notable mentions are:
 
-- [C++ Documentation](https://en.cppreference.com/w/)
-- [Decode DSA with C++ 2.0](https://www.pwskills.com//)
-- [LeetCode](https://leetcode.com/)
+- ([C++ Documentation](https://en.cppreference.com/w/))
+- ([Decode DSA with C++ 2.0](https://www.pwskills.com//))
+- ([LeetCode](https://leetcode.com/))
 
 ## Conclusion
 
