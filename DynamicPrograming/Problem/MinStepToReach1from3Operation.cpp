@@ -28,6 +28,10 @@ using namespace std;
 
 // Approach 2: Tabulation
 class Solution{
+    /**
+     * T.C = O(n)
+     * S.C = O(n)
+     */
 public:
     int minStep(int n){
         vector<int> dp(n+1,-1);
