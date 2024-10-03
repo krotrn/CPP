@@ -26,7 +26,14 @@ public:
 
 int main() {
     Solution s;
-    vector<vector<int>> happy = {{10, 40, 70}, {20, 50, 80}, {30, 60, 90}};
+    int n;
+    cin >> n;
+    vector<vector<int>> happy(n, vector<int>(3));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cin >> happy[i][j];
+        }
+    }
     cout << s.maxHappyness(happy) << endl;
     return 0;
 }
