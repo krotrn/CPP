@@ -1,40 +1,55 @@
-
 # Learning DSA in C++
 
 Welcome to my journey of learning Data Structures and Algorithms (DSA) in C++. This repository is a personal project where I commit to learning and improving my DSA skills every day. I aim to update this repository regularly with new concepts, code snippets, and challenges I've tackled.
 
 ## Introduction
 
-Data Structures and Algorithms are fundamental to improving problem-solving skills and understanding computational efficiency. My goal is to master these concepts in C++ because of its close relationship with system-level resources and its performance advantages.
+Data Structures and Algorithms are fundamental to improving problem-solving skills and understanding computational efficiency. My goal is to master these concepts in C++ due to its performance advantages and its close relationship with system-level resources.
 
-## What I've Learned Till Date
-
-Till now, I have covered a variety of topics in both data structures and algorithms. Below is a brief overview:
+## Topics Covered
 
 ### Data Structures
 
-- **Arrays**: Understanding static and dynamic arrays, and their applications.
-- **Linked Lists**: Singly and doubly linked lists, and implementing basic operations such as insertion, deletion, and traversal
-- **Stack**
-- **Queue**
+- **Arrays**: Static and dynamic arrays, and their applications.
+- **Linked Lists**: Singly and doubly linked lists; basic operations like insertion, deletion, and traversal.
+- **Stacks**: Implementation and usage scenarios.
+- **Queues**: Different types such as circular and priority queues.
+- **Heap**: Max and min heaps; applications in priority queues and heapsort.
+- **HashMap**: Efficient key-value storage, collision handling, and usage in various algorithms.
+- **Sets**: Unordered and ordered sets, operations like union, intersection, and difference.
+- **Trees**: General trees, binary trees, and traversal techniques (preorder, inorder, postorder).
+- **Binary Search Trees (BST)**: Operations like insertion, deletion, and searching in a BST.
 
 ### Algorithms
 
-- **Sorting and Searching**: Bubble sort, insertion sort, merge sort, quicksort, linear search, and binary search.
+- **Sorting and Searching**: Bubble sort, insertion sort, merge sort, quicksort, linear search, binary search.
+- **Greedy Algorithms**: Problem-solving strategies that build up a solution step by step, making locally optimal choices.
+- **Dynamic Programming (DP)**(currently Learning): Techniques to solve complex problems by breaking them down into simpler subproblems, focusing on overlapping subproblems and optimal substructure.
 
-This journey is ongoing, and I plan to delve deeper into each of these topics, exploring more complex problems and efficient solutions.
+### Object-Oriented Programming (OOP)
 
-## Resources
+- Mastering OOP principles such as encapsulation, inheritance, polymorphism, and abstraction in C++ for better modularity and code reuse.
 
-## My LeetCode Account
-- ([LeetCode](https://leetcode.com/u/Krotrn/))
+This journey is ongoing, and I plan to explore more advanced topics and dive deeper into optimizing solutions.
 
-I've been utilizing a variety of resources for learning, including online courses, textbooks, and coding platforms like LeetCode and HackerRank. Some notable mentions are:
+## Learning Resources
 
-- ([C++ Documentation](https://en.cppreference.com/w/))
-- ([Decode DSA with C++ 2.0](https://www.pwskills.com//))
-- ([LeetCode](https://leetcode.com/))
+I've been leveraging a variety of resources to aid my learning:
+
+- [C++ Documentation](https://en.cppreference.com/w/)
+- [Decode DSA with C++ 2.0](https://www.pwskills.com/)
+- [LeetCode](https://leetcode.com/)
+
+## LeetCode Profile
+
+You can follow my problem-solving progress on LeetCode:  
+[LeetCode - Krotrn](https://leetcode.com/u/krotrn/)
 
 ## Conclusion
 
-This repository not only serves as a log of my learning journey but also as a resource for anyone interested in mastering DSA in C++. I hope it inspires and aids others in their learning paths.
+This repository serves as both a log of my personal learning journey and a resource for anyone interested in mastering DSA in C++. Feel free to explore, contribute, or draw inspiration from it!
+
+## GitHub Repository
+
+Explore my code and projects:  
+[GitHub - CPP DSA Journey](https://github.com/krotrn/CPP)
