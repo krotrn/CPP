@@ -8,41 +8,41 @@ public:
     int smallestChair(vector<vector<int>>& times, int targetFriend) {
         int n = times.size();
 
-        // Create an fr vector to track the original index of friends
+        // index of friends
         vector<int> fr(n);
         for (int i = 0; i < n; i++) 
             fr[i] = i;
 
-        // Sort fr based on arrival time
+        // Sort based on arrival time
         sort(fr.begin(), fr.end(), [&times](int a, int b) { 
             return times[a][0] < times[b][0];
         });
 
-        // Min-heap for available seats and seats currently taken
+        // for available seats 
         priority_queue<int, vector<int>, greater<int>> emptySeats;
+        // for seats currently taken
         // {leaving, seat no.}
         priority_queue<pr, vector<pr>, greater<pr>> takenSeats;
 
-        // Initialize empty seats
+        // assigning seat
         for (int i = 0; i < n; i++) 
             emptySeats.push(i);
 
-        // Process each friend's arrival and leave times
         for (int i : fr) {
             int arr = times[i][0]; // current time
             int lv = times[i][1];
 
-            // Free up seats for friends who have already left
+            // Free up seats who left before current time
             while (!takenSeats.empty() && takenSeats.top().first <= arr) {
                 emptySeats.push(takenSeats.top().second);
                 takenSeats.pop();
             }
 
-            // Assign the smallest available seat
+            // smallest seat (min-heap)
             int seat = emptySeats.top();
             emptySeats.pop();
 
-            // If this is the target friend, return the seat number
+            // If this is the target friend
             if (i == targetFriend) {
                 return seat;
             }
