@@ -53,18 +53,24 @@ public:
 
 
     void royAndCoin2(int n, vector<int> &f, int &q){
-        // by prefix sum we can calculate effect per box == no. of coins per box
-        for (int i = 1; i <= n; i++)
-            f[i] += f[i - 1];
         
+        // finding maximum effect
+        int mx = f[1];
 
-        vector<int> c(n + 1, 0);
-        for (int i = 0; i <= n; i++)
+        // by prefix sum we can calculate effect per box == no. of coins per box
+        for (int i = 1; i <= n; i++){ // O(n)
+            f[i] += f[i - 1];
+            // for calculartion of maximum effect
+            mx = max(mx, f[i]);
+        }
+
+        vector<int> c(mx + 1, 0);
+        for (int i = 0; i <= n; i++)// O(n)
              // for calculation of c[i] no. of boxes with i coins
             c[f[i]]++;
         
 
-        for (int i = n - 1; i >= 0; i--)
+        for (int i = n - 1; i >= 0; i--) // 
             // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
             c[i] += c[i + 1];
         
