@@ -35,8 +35,8 @@ public:
             c[f[i]]++;
         
 
-        // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
         for (int i = mx - 1; i >= 0; i--) // O(mx)
+            // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
             c[i] += c[i + 1];
         
 
@@ -50,17 +50,22 @@ public:
         }
         return;
     }
+
+
     void royAndCoin2(int n, vector<int> &f, int &q){
+        // by prefix sum we can calculate effect per box == no. of coins per box
         for (int i = 1; i <= n; i++)
             f[i] += f[i - 1];
         
 
         vector<int> c(n + 1, 0);
         for (int i = 0; i <= n; i++)
+             // for calculation of c[i] no. of boxes with i coins
             c[f[i]]++;
         
 
         for (int i = n - 1; i >= 0; i--)
+            // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
             c[i] += c[i + 1];
         
 
@@ -92,7 +97,10 @@ int main(){
         // L[l]++;
         // ending filling at r
         // R[r]++;
+
+        // start effecting
         f[l]++;
+        // nullifying effecting
         f[r + 1]--;
     }
     int q;
