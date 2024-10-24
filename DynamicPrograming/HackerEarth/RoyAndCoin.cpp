@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// https://www.hackerearth.com/problem/algorithm/roy-and-coins-f386330e/
+
 class Solution{
 public:
     void royAndCoin(int n, vector<int> &L,vector<int> &R, int &q){
@@ -30,13 +32,13 @@ public:
 
         // max is for it will not exceed max
         vector<int> c(mx + 1, 0); // O(n)
-        for (int i = 0; i <= n; i++)
             // for calculation of c[i] no. of boxes with i coins
+        for (int i = 0; i <= n; i++)
             c[f[i]]++;
         
 
-        for (int i = mx - 1; i >= 0; i--) // O(mx)
             // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
+        for (int i = mx - 1; i >= 0; i--) // O(mx)
             c[i] += c[i + 1];
         
 
@@ -65,13 +67,13 @@ public:
         }
 
         vector<int> c(mx + 1, 0);
-        for (int i = 0; i <= n; i++)// O(n)
              // for calculation of c[i] no. of boxes with i coins
+        for (int i = 0; i <= n; i++)// O(n)
             c[f[i]]++;
         
 
-        for (int i = n - 1; i >= 0; i--) // 
-            // for calculation of c[i] no.of boxes with atleast i coins by suffix sum
+            // for calculation of c[i] no. of boxes with atleast i coins by suffix sum
+        for (int i = mx - 1; i >= 0; i--) // 
             c[i] += c[i + 1];
         
 
@@ -113,4 +115,5 @@ int main(){
     cin >> q;
     Solution s;
     s.royAndCoin2(n, f, q);
+    // s.royAndCoin(n, L, R, q);
 }
