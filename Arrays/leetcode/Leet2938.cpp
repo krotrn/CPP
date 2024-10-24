@@ -17,7 +17,7 @@ public:
         return ans;
     }
 };
-ststic const auto speedup = []()
+static const auto speedup = []()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
