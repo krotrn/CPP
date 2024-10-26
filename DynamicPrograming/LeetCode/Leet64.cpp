@@ -3,17 +3,14 @@
 using namespace std;
 
 class Solution {
-    int helper(int str, int stc, int m, int n, vector<vector<int>>& grid,
-               vector<vector<int>>& dp) {
+    int helper(int str, int stc, int m, int n, vector<vector<int>>& grid, vector<vector<int>>& dp) {
         if (str == m || stc == n)
             return INT_MAX;
         if (str == m - 1 and stc == n - 1)
             return grid[str][stc];
         if (dp[str][stc] != -1)
             return dp[str][stc];
-        return dp[str][stc] =
-                   grid[str][stc] + min(helper(str + 1, stc, m, n, grid, dp),
-                                        helper(str, stc + 1, m, n, grid, dp));
+        return dp[str][stc] = grid[str][stc] + min(helper(str + 1, stc, m, n, grid, dp), helper(str, stc + 1, m, n, grid, dp));
     }
 
 public:
