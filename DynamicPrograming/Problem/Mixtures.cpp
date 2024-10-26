@@ -33,11 +33,14 @@ public:
 
 
     // Iterative
-    int minSmokesBotUp(vector<int> &mixture){
+    int minSmokesBotUp(vector<int> &mixture){ // 
         int n = mixture.size();
         vector<vector<int>> dp(101, vector<int>(101, 0));
+        // for size of selection
         for (int len = 2; len <= n; len++){
+            // for start of selection
             for (int s = 0; s <= n - len; s++){
+                // for end of selection
                 int e = s + len - 1;
                 int smoke = INT_MAX;
                 for (int k = s; k < e; k++)
