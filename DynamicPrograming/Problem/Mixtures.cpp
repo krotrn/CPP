@@ -24,11 +24,29 @@ class Solution {
     }
 
 public:
+    // Recursive
     int minSmokes(vector<int> &mixture){
         int n = mixture.size();
         vector<vector<int>> dp(101, vector<int>(101, -1));
-
         return helper(0, n - 1, mixture, dp);
+    }
+
+
+    // Iterative
+    int minSmokesBotUp(vector<int> &mixture){
+        int n = mixture.size();
+        vector<vector<int>> dp(101, vector<int>(101, 0));
+        for (int len = 2; len <= n; len++){
+            for (int s = 0; s <= n - len; s++){
+                int e = s + len - 1;
+                int smoke = INT_MAX;
+                for (int k = s; k < e; k++)
+                    smoke = min(smoke, dp[s][k] + dp[k + 1][e] + sum(s, k, mixture) * sum(k + 1, e, mixture));
+
+                dp[s][e] = smoke;
+            }
+        }
+        return dp[0][n - 1];
     }
 };
 
@@ -39,7 +57,7 @@ int main() {
         vector<int> mixture(n);
         for (int i = 0; i < n; i++)
             cin >> mixture[i];
-        cout << s.minSmokes(mixture);
+        cout << s.minSmokesBotUp(mixture) << endl;
         mixture.clear();
     }
     return 0;
