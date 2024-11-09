@@ -24,7 +24,7 @@ int main(){
         }
         cout<<endl;
     }
-    /*class Solution {
+/*  class Solution {
 public:
     vector<vector<int>> transpose(vector<vector<int>>& matrix) {
         int m = matrix.size();
@@ -37,5 +37,6 @@ public:
         }
         return t;
     }
-};*/
+};
+*/
 }
