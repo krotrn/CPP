@@ -12,6 +12,7 @@ int main(){
             cin>>a1[i][j];
         }
     }
+    // Transpose of matrix
     for(int i=0;i<m;i++){
         for(int j=i+1;j<m;j++){
             int t = a1[i][j];
@@ -19,10 +20,14 @@ int main(){
             a1[j][i] = t;
         }
     }
-    for(int i=0;i<m;i++){
-        int t = a1[i][0];
-        a1[i][0] = a1[i][m-1];
-        a1[i][m-1] = t;
+    // Reverse of matrix
+    for (int i = 0; i < n; i++) {
+        int start = 0, end = n - 1;
+        while (start < end) {
+            swap(matrix[i][start], matrix[i][end]);
+            start++;
+            end--;
+        }
     }
     cout<<"The Transpose is : "<<endl;
     for(int i = 0;i<m;i++){
