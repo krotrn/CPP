@@ -53,32 +53,40 @@ public:
                 delay[toRemove]++;
 
                 // Adjust heap sizes for delayed removal
-                if (toRemove <= left.top()) leftSize--;
-                else rightSize--;
+                if (!left.empty() && toRemove <= left.top())
+                    leftSize--;
+                else
+                    rightSize--;
 
-                // Clean up delayed elements in heaps
+                // Clean up delayed elements in left heap
                 while (!left.empty() && delay[left.top()]) {
                     delay[left.top()]--;
+                    if (delay[left.top()] == 0)
+                        delay.erase(left.top());
                     left.pop();
                 }
+
+                // Clean up delayed elements in right heap
                 while (!right.empty() && delay[right.top()]) {
                     delay[right.top()]--;
+                    if (delay[right.top()] == 0)
+                        delay.erase(right.top());
                     right.pop();
                 }
 
                 // Rebalance heaps after cleanup
-                balanceHeaps(left,right,leftSize,rightSize);
+                balanceHeaps(left, right, leftSize, rightSize);
             }
 
             // Add median to result if window is full
             if (i >= k - 1) {
-                result.push_back(getMedian(left,right,leftSize,rightSize));
+                result.push_back(round(getMedian(left, right, leftSize, rightSize) * 100000.0) / 100000.0);
             }
         }
-
         return result;
     }
 };
+
 
 
 int main(){
