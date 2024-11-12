@@ -19,7 +19,7 @@ class Solution {
         }
     }
 
-    int getMedian(priority_queue<int> &left, priority_queue<int, vector<int>, greater<int>> &right, int &leftSize, int &rightSize){
+    double getMedian(priority_queue<int> &left, priority_queue<int, vector<int>, greater<int>> &right, int &leftSize, int &rightSize){
         if (leftSize > rightSize)
                 return left.top();
             else
@@ -65,8 +65,6 @@ public:
                         delay.erase(left.top());
                     left.pop();
                 }
-
-                // Clean up delayed elements in right heap
                 while (!right.empty() && delay[right.top()]) {
                     delay[right.top()]--;
                     if (delay[right.top()] == 0)
