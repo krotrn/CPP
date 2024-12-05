@@ -15,19 +15,14 @@ class Solution {
                 break;
             }
         }
-        if(idx==-1){
-            reverse(nums.begin(),nums.end());
-            return;
-        }
-        reverse(nums.begin()+idx+1,nums.end());
+        reverse(nums.begin()+idx+1,nums.end());i
+        if(idx==-1) return;
         for(int i=idx+1;i<n;i++){
-            if(nums[idx]<nums[i]){
-                n=i;
+            if(nums[i] > nums[idx]){
+                swap(nums[idx], nums[i]);
+                return;
             }
         }
-        int t=nums[idx];
-        nums[idx]=nums[n];
-        nums[n]=t;
         return;
     }
 };
