@@ -23,21 +23,28 @@ public:
 };
 
 class Solution {
+    vector<Node *> reg;
+    void dfs(Node* node, Node* clone){
+        for(auto neighbour : node->neighbors){
+            Node *temp;
+            if(!reg[neighbour->val]){
+                temp = new Node(neighbour->val);
+                reg[neighbour->val] = temp;
+                dfs(neighbour, temp);
+            }else{
+                temp = reg[neighbour->val];
+            }
+            clone->neighbors.push_back(temp);
+        }
+    }
 public:
     Node* cloneGraph(Node* node) {
-        queue<Node *> q;
-        vector<bool> visited(n, false);
-        q.push(0);
-        visited[0] = true;
-        while(!q.empty()){
-            int curr = q.front();
-            q.pop();
-            for(auto key: rooms[curr]){
-                if(!visited[key]){
-                    q.push(key);
-                    visited[key] = true;
-                }
-            }
-        }
+        if(node == NULL)
+            return node;
+        Node *clone = new Node(node->val);
+        reg.resize(110, NULL);
+        reg[node->val] = clone;
+        dfs(node, clone);
+        return clone;
     }
 };
