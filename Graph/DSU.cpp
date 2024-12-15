@@ -2,20 +2,27 @@
 
 using namespace std;
 
+// Function to find the root of an element x
+// Uses path compression to flatten the structure
 int find(vector<int> &parent, int x ) {
     return (parent[x] == x) ? x : parent[x] = find(parent, parent[x]);
 }
 
-void Union(vector<int> &parent,vector<int> &rank, int a, int b){
-    a = find(parent, a);
-    b = find(parent, b);
-
-    if(rank[a] >= rank[b]){
-        rank[a]++;
-        parent[b] = a;
-    }else{
-        rank[b]++;
-        parent[a] = b;
+// Function to perform union of two sets
+// Uses union by rank to keep the tree shallow
+void Union(vector<int> &parent, vector<int> &rank, int a, int b) {
+    a = find(parent, a); // Find the root of element a
+    b = find(parent, b); // Find the root of element b
+   if (a != b) { // Only union if roots are different
+        // Union by rank
+        if (rank[a] > rank[b]) {
+            parent[b] = a; // Make a the parent of b
+        } else if (rank[a] < rank[b]) {
+            parent[a] = b; // Make b the parent of a
+        } else {
+            parent[b] = a; // Arbitrarily choose one as root
+            rank[a]++;     // Increment rank of the new root
+        }
     }
 }
 
