@@ -1,10 +1,9 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 class Solution {
 public:
-    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         int v = numCourses;
         vector<vector<int>> graph(v);
         int edge = prerequisites.size();
@@ -50,8 +49,6 @@ public:
             }
         }
 
-        // Check if topological sort is possible
-        vector<int> em;
-        return (topoOrder.size() == v) ? topoOrder : em;
+        return (topoOrder.size() == v);
     }
 };
