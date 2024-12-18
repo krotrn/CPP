@@ -2,7 +2,6 @@
 
 using namespace std;
 
-// https://www.hackerrank.com/challenges/kruskalmstrsub/problem
 
 class Solution {
 
@@ -29,9 +28,8 @@ class Solution {
 public:
     int minimumCost(int n, vector<vector<int>>& connection) {
         if (n == 0 || connection.empty()) return -1;
-        sort(connection.begin(), connection.end(), [](vector<int> &a, vector<int> &b) {
-            return a[2] < b[2];
-        });
+        sort(connection.begin(), connection.end(), [](vector<int> &a, vector<int> &b)
+             { return a[2] < b[2]; });
         vector<int> parent(n + 1, -1), rank(n + 1, 0);
         int ans = 0;
         int edgeCount = 0;
@@ -40,6 +38,7 @@ public:
             int desPar = find(ele[1], parent);
             if(srcPar == desPar) continue;
             ans += ele[2];
+            Union(srcPar, desPar, parent, rank);
             edgeCount++;
             if(edgeCount == n - 1)
                 break;

@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// https://www.hackerrank.com/challenges/kruskalmstrsub/problem
+
 int find(int x, vector<int> &parent){
     return parent[x] = (parent[x] == x || parent[x] == -1) ? x : find(parent[x], parent);
 }
