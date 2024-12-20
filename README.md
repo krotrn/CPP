@@ -25,7 +25,9 @@ Data Structures and Algorithms are fundamental to improving problem-solving skil
 - **Sorting and Searching**: Bubble sort, insertion sort, merge sort, quicksort, linear search, binary search.
 - **Greedy Algorithms**: Problem-solving strategies that build up a solution step by step, making locally optimal choices.
 - **Dynamic Programming (DP)**: Techniques to solve complex problems by breaking them down into simpler subproblems, focusing on overlapping subproblems and optimal substructure.
-- **Graph Algorithms**(Currently Learning): Representation of graphs (adjacency matrix, adjacency list), depth-first search (DFS), breadth-first search (BFS), shortest path algorithms (Dijkstra's, Bellman-Ford), and minimum spanning tree algorithms (Kruskal's, Prim's).
+- **Graph Algorithms**: Representation of graphs (adjacency matrix, adjacency list), depth-first search (DFS), breadth-first search (BFS), shortest path algorithms (Dijkstra's, Bellman-Ford), and minimum spanning tree algorithms (Kruskal's, Prim's).
+- **Backtracking(Currently Learning)**: Systematic way to iterate through all possible configurations of a search space, used for solving constraint satisfaction problems like puzzles, permutations, and combinations.
+
 
 ### Object-Oriented Programming (OOP)
 
