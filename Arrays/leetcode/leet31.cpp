@@ -15,7 +15,7 @@ class Solution {
                 break;
             }
         }
-        reverse(nums.begin()+idx+1,nums.end());i
+        reverse(nums.begin()+idx+1,nums.end());
         if(idx==-1) return;
         for(int i=idx+1;i<n;i++){
             if(nums[i] > nums[idx]){
