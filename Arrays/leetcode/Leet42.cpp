@@ -45,30 +45,30 @@ class Solution{
 public:
     int trap(vector<int>& height) {
         int ans = 0;
-        int left = 0, right = height.size() - 1;
+        int i = 0, j = height.size() - 1;
         int left_max = 0, right_max = 0;
-        while(left < right){
-            // if left height is smaller than right height
-            // then we can trap water at left side
-            if(height[left] <= height[right]){
-                // if left height is greater than left_max
+        while(i < j){
+            // if i height is smaller than j height
+            // then we can trap water at i side
+            if(height[i] <= height[j]){
+                // if i height is greater than left_max
                 // then update left_max
-                // else add the difference between left_max and left height to ans
-                if(height[left] >= left_max)
-                    left_max = height[left];
+                // else add the difference between left_max and i height to ans
+                if(height[i] >= left_max)
+                    left_max = height[i];
                 else
-                    ans += left_max - height[left];
+                    ans += left_max - height[i];
             }
-                // if right height is greater than left height
-                // then we can trap water at right side
+                // if j height is greater than i height
+                // then we can trap water at j side
             else{
-                // if right height is greater than right_max  
+                // if j height is greater than right_max  
                 // then update right_max
-                // else add the difference between right_max and right height to ans
-                if(height[right] >= right_max)
-                    right_max = height[right];
+                // else add the difference between right_max and j height to ans
+                if(height[j] >= right_max)
+                    right_max = height[j];
                 else
-                    ans += right_max - height[right];
+                    ans += right_max - height[j];
             }
         }
         return ans;
